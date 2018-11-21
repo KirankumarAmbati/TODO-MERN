@@ -57,7 +57,7 @@ class App extends Component {
       // Read the data from our cache for this query.
       const data = store.readQuery({ query: TodosQuery });
       // Add our comment from the mutation to the end.
-      data.todos.unshift(createTodo);
+      data.todos.push(createTodo);
       // Write our data back to the cache.
       store.writeQuery({ query: TodosQuery, data });
     }})
